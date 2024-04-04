@@ -1,3 +1,6 @@
+test:
+	@go test -v -cover ./...
+
 # can pass migration file name as name=file_name
 migrate_init:
 	@goose -dir db/schema postgres ${DATABASE_URL} create $(name) sql
